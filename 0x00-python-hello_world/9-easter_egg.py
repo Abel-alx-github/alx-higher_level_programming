@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print(__import__("this").__doc__)
+import this
