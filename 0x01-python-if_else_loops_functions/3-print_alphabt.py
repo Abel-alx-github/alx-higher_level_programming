@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for alp in range(97, 123):
-    if alp != 'e' and alp != 'q':
+    if alp != 101 and alp != 113:
         print((chr(alp).format()), end="")
