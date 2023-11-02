@@ -4,11 +4,10 @@ if __name__ == '__main__':
     a = 10
     b = 5
     a_plus_b = add(a, b)
-    a_minus_b = sub(a , b)
+    a_minus_b = sub(a, b)
     a_times_b = mul(a, b)
     a_divide_b = div(a, b)
     print(f"{a} + {b} = {a_plus_b}")
     print(f"{a} - {b} = {a_minus_b}")
     print(f"{a} * {b} = {a_times_b}")
     print(f"{a} / {b} = {a_divide_b}")
-
