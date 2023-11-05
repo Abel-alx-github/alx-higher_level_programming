@@ -1,10 +1,9 @@
+#include "lists.h"
 /**
 *is_palindrome - function that check if the list is palindrom.
 *@head: pointer to pointer of first head.
 *Return: 1 if list is palindrome otherwise 0
 */
-#include "lists.h"
-#include <stdio.h>
 int is_palindrome(listint_t **head)
 {
 	if (*head == NULL || (*head)->next == NULL)
