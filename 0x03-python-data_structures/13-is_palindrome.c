@@ -38,7 +38,7 @@ int is_palindrome(listint_t **head)
 			j++;
 			forward = forward->next;
 		}
-		free_listint(forward);
+		free_forward(forward);
 		start = start->next;
 		i++, no_node--, j = 1;
 	}
@@ -46,4 +46,19 @@ int is_palindrome(listint_t **head)
 		return (1);
 	return (0);
 
+}
+/**
+*free_forward - frees a list
+*@head: pointer to head
+*/
+void free_forward(listint_t *head)
+{
+	listint_t *current;
+
+	while (head != NULL)
+	{
+		current = head;
+		head = head->next;
+		free(current);
+	}
 }
