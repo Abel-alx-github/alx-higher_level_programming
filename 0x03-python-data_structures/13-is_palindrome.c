@@ -8,57 +8,35 @@ int is_palindrome(listint_t **head)
 {
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
+
 	listint_t *current = *head;
-	listint_t *forward = *head;
-	listint_t *start = *head;
-	int no_node = 0;
+	listint_t *reversed_head = NULL;
 
-	while (current)
+	while (current != NULL)
 	{
-		no_node++;
-		current = current->next;
+		listint_t *next;
+
+		next = current->next;
+		current->next = reversed_head;
+		reversed_head = current;
+		current = next;
 	}
-	int mid = no_node / 2;
-	int i = 0;
-	int is_pal = 0;
 
-	while (i <= mid)
+	listint_t *original_head;
+	listint_t *reversed;
+
+	original_head = *head;
+	reversed = reversed_head;
+
+	while (original_head != NULL && reversed != NULL)
 	{
-		if (forward == NULL)
-			forward = *head;
-		int j = 1;
-
-		while (forward)
+		if (original_head->n != reversed->n)
 		{
-			if (j == no_node)
-			{
-				if (start->n == forward->n)
-					is_pal++;
-			}
-			j++;
-			forward = forward->next;
+			return (0);
 		}
-		free_forward(forward);
-		start = start->next;
-		i++, no_node--, j = 1;
+		original_head = original_head->next;
+		reversed = reversed->next;
 	}
-	if (i == is_pal)
-		return (1);
-	return (0);
-
+	return (1);
 }
-/**
-*free_forward - frees a list
-*@head: pointer to head
-*/
-void free_forward(listint_t *head)
-{
-	listint_t *current;
 
-	while (head != NULL)
-	{
-		current = head;
-		head = head->next;
-		free(current);
-	}
-}
