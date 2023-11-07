@@ -6,37 +6,38 @@
 */
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
+	listint_t *temp = *head;
+	int j, i, count_node = 0;
 
-	listint_t *current = *head;
-	listint_t *reversed_head = NULL;
-
-	while (current != NULL)
+	while (temp)
 	{
-		listint_t *next;
-
-		next = current->next;
-		current->next = reversed_head;
-		reversed_head = current;
-		current = next;
+		count_node++;
+		temp = temp->next;
 	}
+	int arr[count_node];
 
-	listint_t *original_head;
-	listint_t *reversed;
+	temp = *head;
+	i = count_node - 1;
 
-	original_head = *head;
-	reversed = reversed_head;
-
-	while (original_head != NULL && reversed != NULL)
+	while (i >= 0)
 	{
-		if (original_head->n != reversed->n)
+		arr[i] = temp->n;
+		temp = temp->next;
+		i -= 1;
+	}
+	temp = *head;
+	j = 0;
+
+	while (j < count_node)
+	{
+		if (arr[j] == temp->n)
 		{
-			return (0);
+			temp = temp->next;
 		}
-		original_head = original_head->next;
-		reversed = reversed->next;
+		else
+			return (0);
+		j += 1;
 	}
 	return (1);
-}
 
+}
