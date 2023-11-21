@@ -5,10 +5,13 @@
 
 class Square:
     """block of this class, statment"""
+
     def __init__(self, size=0):
         """ initialize the instance or object of this class.
+
         Args:
-            size(int): size of new instance."""
+            size(int): size of new instance.
+        """
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
         elif size < 0:
