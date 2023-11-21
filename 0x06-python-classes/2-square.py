@@ -9,8 +9,8 @@ class Square:
         """ initialize the instance or object of this class.
         Args:
             size(int): size of new instance."""
-        if size < 0:
-            raise ValueError('size must be >= 0')
-        elif not isinstance(size, int):
+        if not isinstance(size, int):
             raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
         self._size = size
