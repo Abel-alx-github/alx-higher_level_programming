@@ -7,11 +7,13 @@ class Square:
 
     def __init__(self, size):
         """ initailize the object"""
+
         self.size = size
 
     @property
     def size(self):
         """ Args:
+
             size(int): method to retrive value
         Return: returns value of size"""
         return (self.__size)
@@ -19,6 +21,7 @@ class Square:
     @size.setter
     def size(self, value):
         """ Args:
+
             size(int): method to set value, setter
             """
         if not isinstance(value, int):
