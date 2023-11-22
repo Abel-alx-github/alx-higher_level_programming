@@ -31,4 +31,4 @@ class Square:
         """ Args:
             self: object
             Return: area of square"""
-        return (self.__size ** 2)
+        return (self.__size * self.__size)
