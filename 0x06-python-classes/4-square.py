@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Define class as square"""
 
 
 class Square:
-    ''' represent square class, statment'''
+    """ represent square class, statment"""
 
     def __init__(self, size):
         ''' initailize the object'''
