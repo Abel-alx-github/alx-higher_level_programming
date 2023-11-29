@@ -1,4 +1,4 @@
-#!/usr/bin/pythno3
+#!/usr/bin/python3
 """ define a function that print size times '#' square"""
 
 
