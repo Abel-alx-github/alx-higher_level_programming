@@ -9,6 +9,4 @@ class MyList(list):
 
     def print_sorted(self):
         """ instance methode to print list's containt"""
-        a = self.copy()
-        a.sort()
-        print("{}".format(a))
+        print(sorted(self))
