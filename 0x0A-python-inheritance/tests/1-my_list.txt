@@ -30,4 +30,22 @@ does it print
 [1, 2, 3]
 
 ::
+does it append negative int
 
+>>> my_list = MyList()
+>>> my_list.append(6)
+>>> my_list.append(1)
+>>> my_list.append(-1)
+>>> my_list.append(41)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -1, 1, 6, 41]
+>>>
+::
+passing empty list
+>>> b = MyList()
+>>> c = b
+>>> c.print_sorted()
+[]
+
+::
