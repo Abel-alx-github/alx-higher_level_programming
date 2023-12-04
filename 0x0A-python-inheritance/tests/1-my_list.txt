@@ -71,3 +71,13 @@ AttributeError: 'list' object has no attribute 'print_sorted'
 >>> my_list2.print_sorted()
 [1, 1, 1, 1]
 >>>
+not defined object
+
+>>> MyList = __import__('1-my_list').MyList
+>>> list2.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'list2' is not defined
+>>>
+::
+
