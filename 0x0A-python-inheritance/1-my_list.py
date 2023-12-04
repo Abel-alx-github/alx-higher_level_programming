@@ -11,4 +11,4 @@ class MyList(list):
         """ instance methode to print list's containt"""
         a = self.copy()
         a.sort()
-        print(a)
+        print("{}".format(a))
