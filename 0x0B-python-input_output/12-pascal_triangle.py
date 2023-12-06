@@ -8,7 +8,7 @@ def pascal_triangle(n):
     representing the Pascal’s triangle
     """
     if n <= 0:
-        a = [[]]
+        a = []
         return a
     if n == 1:
         a = [[1]]
