@@ -14,7 +14,7 @@ def pascal_triangle(n):
         a = [[1]]
         return a
     elif n > 1:
-        no_row = n - 1 
+        no_row = n - 1
         a = [[1]]
         while no_row > 0:
             b = a[-1]
