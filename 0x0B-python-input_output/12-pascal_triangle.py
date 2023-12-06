@@ -13,15 +13,11 @@ def pascal_triangle(n):
     if n == 1:
         a = [[1]]
         return a
-    elif n == 2:
-        a = [[1], [1, 1]]
-        return a
-    elif n > 2:
-        no_row = n - 2
-        a = [[1], [1, 1]]
+    elif n > 1:
+        no_row = n - 1 
+        a = [[1]]
         while no_row > 0:
-            len_a = len(a)
-            b = a[len_a - 1]
+            b = a[-1]
             len_b = len(b)
             new = [1]
             for i in range(len_b - 1):
