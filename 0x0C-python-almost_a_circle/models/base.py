@@ -47,10 +47,10 @@ class Base:
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
                 dummy = cls(10, 20, 30, 40)
-             else:
+            else:
                  dummy = cls(1)
-             dummy.update(**dictionary)
-             return dummy
+            dummy.update(**dictionary)
+            return dummy
 
     @classmethod
     def load_from_file(cls):
