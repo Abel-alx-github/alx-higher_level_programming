@@ -27,7 +27,7 @@ class Base:
         name = cls.__name__ + ".json"
         with open(name, "w") as f:
             if list_objs is None:
-                f.write(Base.to_json_string([]))
+                f.write("[]")
             elif list_objs:
                 dic_list = [listt.to_dictionary() for listt in list_objs]
                 f.write(Base.to_json_string(dic_list))
