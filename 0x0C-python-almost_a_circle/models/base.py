@@ -45,10 +45,10 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
         if dictionary and dictionary != {}:
-            if cls.__name__ == "Rectangle":
+            if cls.__name__ == "Rectangle" or cls.__name__ == "Square":
                 dummy = cls(10, 20, 30, 40)
             else:
-                dummy = cls(1, 1, 1)
+                dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
 
