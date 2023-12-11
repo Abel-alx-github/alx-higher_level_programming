@@ -151,7 +151,7 @@ class test_from_json_string(unittest.TestCase):
 
       def test_with_None(self):
           """ test with None as input"""
-          self.assertEqual(Base.from_json_string(None), '[]')
+          self.assertEqual(Base.from_json_string(None), [])
 
       def test_with_empty(self):
           """ test with no input"""
