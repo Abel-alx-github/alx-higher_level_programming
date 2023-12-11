@@ -48,7 +48,7 @@ class Base:
             if cls.__name__ == "Rectangle":
                 dummy = cls(10, 20, 30, 40)
             else:
-                 dummy = cls(1)
+                dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
 
