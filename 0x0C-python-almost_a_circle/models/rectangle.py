@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ contain inhertied class defination"""
 from models.base import Base
 
