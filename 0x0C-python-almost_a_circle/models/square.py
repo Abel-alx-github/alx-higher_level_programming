@@ -22,6 +22,8 @@ class Square(Rectangle):
         if value < 0:
             raise ValueError("width must be an integer")
         self.__size = value
+        self.__width = value
+        self.__height = value
 
     def __str__(self):
         """ retrun formal presentation of instance """
