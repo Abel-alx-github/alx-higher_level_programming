@@ -11,7 +11,7 @@ def safe_function(fct, *args):
         the result otherwise returns None
     """
     try:
-        result = fct
+        result = fct(*args)
         return result
     except Exception as error:
         print("Exception: {}".format(error), file=sys.stderr)
