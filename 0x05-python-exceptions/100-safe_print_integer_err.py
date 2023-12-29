@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-def def safe_print_integer_err(value):
+import sys
+
+
+def safe_print_integer_err(value):
     """ a function that prints an integer.
     args:
         value
