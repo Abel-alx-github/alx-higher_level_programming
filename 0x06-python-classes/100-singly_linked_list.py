@@ -47,6 +47,7 @@ class SinglyLinkedList:
         """ insert new node to list"""
         new = Node(value)
         if self.__head is None:
+            new.next_node = None
             self.__head = new
         elif self.__head and self.__head.data >= value:
             new.next_node = self.__head
