@@ -4,7 +4,9 @@
 
 class Node:
     """ represent "node" class defination"""
+
     def __init__(self, data, next_node=None):
+        """Initialize a new Node."""
         self.data = data
         self.next_node = next_node
 
@@ -38,6 +40,7 @@ class Node:
 class SinglyLinkedList:
     """ represent singlylinkedlist class"""
     def __init__(self):
+        """Initialize a new Node."""
         self.__head = None
 
     def sorted_insert(self, value):
