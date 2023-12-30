@@ -10,10 +10,12 @@ class Node:
 
     @property
     def data(self):
+        """ retrive data value"""
         return self._data
 
     @data.setter
     def data(self, value):
+        """ set value to data"""
         if isinstance(value, int):
             self._data = value
         else:
@@ -21,10 +23,12 @@ class Node:
 
     @property
     def next_node(self):
+        """retrive value of next node"""
         return self._next_node
 
     @next_node.setter
     def next_node(self, value):
+        """ set value to next node"""
         if value is None or isinstance(value, Node):
             self._next_node = value
         else:
@@ -32,10 +36,12 @@ class Node:
 
 
 class SinglyLinkedList:
+    """ represent singlylinkedlist class"""
     def __init__(self):
         self._head = None
 
     def sorted_insert(self, value):
+        """ insert new node to list"""
         new = Node(value)
         if self._head is None:
             self._head = new
