@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# module contans class defination
+# a module contans class defination
 
 
 class Node:
@@ -49,7 +49,7 @@ class SinglyLinkedList:
         if self.__head is None:
             new.next_node = None
             self.__head = new
-        elif self.__head and self.__head.data >= value:
+        elif self.__head and self.__head.data > value:
             new.next_node = self.__head
             self.__head = new
         else:
@@ -63,7 +63,7 @@ class SinglyLinkedList:
         """ represent print format of the class"""
         lists = []
         current = self.__head
-        while current:
+        while current is not None:
             lists.append(str(current.data))
             current = current.next_node
         return "\n".join(lists)
