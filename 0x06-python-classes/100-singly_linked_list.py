@@ -66,4 +66,4 @@ class SinglyLinkedList:
         while current is not None:
             lists.append(str(current.data))
             current = current.next_node
-        return "\n".join(lists)
+        return ("\n".join(lists))
