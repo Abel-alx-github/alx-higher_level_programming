@@ -21,7 +21,7 @@ class Node:
         if isinstance(value, int):
             self.__data = value
         else:
-            raise TypeError("data must be an integer\n")
+            raise TypeError("data must be an integer")
 
     @property
     def next_node(self):
@@ -34,7 +34,7 @@ class Node:
         if value is None or isinstance(value, Node):
             self.__next_node = value
         else:
-            raise TypeError("next_node must be a Node object\n")
+            raise TypeError("next_node must be a Node object")
 
 
 class SinglyLinkedList:
