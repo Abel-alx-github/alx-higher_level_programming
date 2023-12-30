@@ -48,16 +48,15 @@ class SinglyLinkedList:
         new = Node(value)
         if self.__head is None:
             self.__head = new
-            return
-        if self.__head and value <= self.__head.data:
+        elif self.__head and value <= self.__head.data:
             new.next_node = self.__head
             self.__head = new
-            return
-        current = self.__head
-        while current.next_node and current.next_node.data < value:
-            current = current.next_node
-        new.next_node = current.next_node
-        current.next_node = new
+        else:
+            current = self.__head
+            while current.next_node and current.next_node.data < value:
+                current = current.next_node
+            new.next_node = current.next_node
+            current.next_node = new
 
     def __str__(self):
         lists = []
