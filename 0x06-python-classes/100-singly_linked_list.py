@@ -59,6 +59,7 @@ class SinglyLinkedList:
             current.next_node = new
 
     def __str__(self):
+        """ represent print format of the class"""
         lists = []
         current = self.__head
         while current:
