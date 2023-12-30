@@ -5,8 +5,8 @@
 class Node:
     """ represent "node" class defination"""
     def __init__(self, data, next_node=None):
-        self._data = data
-        self._next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
