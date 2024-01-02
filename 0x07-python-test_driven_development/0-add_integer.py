@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" define function 
+""" define function
 that add tw0 numbers"""
 
 
