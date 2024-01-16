@@ -6,6 +6,9 @@
 */
 int is_palindrome(listint_t **head)
 {
+	if (head == NULL || (*head)->next == NULL)
+		return (1);
+
 	listint_t *temp = *head;
 	int j, i, count_node = 0;
 
