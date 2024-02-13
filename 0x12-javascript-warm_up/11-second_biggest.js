@@ -5,7 +5,7 @@ args = args.map(Number);
 args = args.sort();
 
 if (args.length < 2) {
-  console.log('0');
+  console.log(0);
 } else {
   console.log(args);
   console.log(args[args.length - 2]);
