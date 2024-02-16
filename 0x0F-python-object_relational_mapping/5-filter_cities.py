@@ -23,7 +23,7 @@ if __name__ == '__main__':
     for idx, each in enumerate(all_states):
         if (idx != 0):
             print(', ', end='')
-        print(each, end='')
+        print(each[0], end='')
 
     cur.close()
     myDb.close()
