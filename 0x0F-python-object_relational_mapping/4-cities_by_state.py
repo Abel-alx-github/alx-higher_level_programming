@@ -15,7 +15,8 @@ if __name__ == '__main__':
 
     myCursor = myDb.cursor()
 
-    sql = f"SELECT * FROM cities ORDER BY cities.id ASC"
+    sql = f"SELECT id, name, (SELECT name FROM states\
+    WHERE id=cities.state_id) FROM cities ORDER BY cities.id ASC"
     myCursor.execute(sql)
 
     all_states = myCursor.fetchall()
