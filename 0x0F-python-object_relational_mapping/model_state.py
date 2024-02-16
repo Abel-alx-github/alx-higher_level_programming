@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 ''' create state class that inherits methods form sqlalchamey'''
 
 from sqlalchemy import Column, Integer, String, MetaData
