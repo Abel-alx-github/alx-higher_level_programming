@@ -15,9 +15,9 @@ if __name__ == '__main__':
 
     my_cursor = mydb.cursor()
 
-    sql = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
-    name = sys.argv[4]
-    my_cursor.execute(sql, (name,))
+    sql = "SELECT * FROM states WHERE name BINARY {}
+    ORDER BY states.id ASC".format(sys.argv[4])
+    my_cursor.execute(sql)
 
     all_states = my_cursor.fetchall()
     for each in all_states:
