@@ -7,20 +7,20 @@ import MySQLdb
 
 
 if __name__ == '__main__':
-    mydb = MySQLdb.connect(
+    myDb = MySQLdb.connect(
         host='localhost',
         user=sys.argv[1],
         passwd=sys.argv[2],
         database=sys.argv[3], port=3306)
 
-    my_cursor = mydb.cursor()
+    myCursor = myDb.cursor()
 
-    my_cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'
+    myCursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'
                       ORDER BY states.id ASC".format(sys.argv[4]))
 
-    all_states = my_cursor.fetchall()
+    all_states = myCursor.fetchall()
     for each in all_states:
         print(each)
 
-    my_cursor.close()
-    mydb.close()
+    myCursor.close()
+    myDb.close()
