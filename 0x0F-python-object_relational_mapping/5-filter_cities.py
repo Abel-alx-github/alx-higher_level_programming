@@ -25,5 +25,6 @@ if __name__ == '__main__':
             print(', ', end='')
         print(each[0], end='')
 
+    print()
     cur.close()
     myDb.close()
