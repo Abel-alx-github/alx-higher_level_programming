@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" module that connect ot detabase and fetchall states"""
+""" module that connect ot detabase and fetchall states start with 'N'"""
 
 
 import sys
@@ -15,9 +15,9 @@ if __name__ == '__main__':
 
     my_cursor = mydb.cursor()
 
-    sql = 'SELECT * FROM states ORDER BY states.id ASC'
-
-    my_cursor.execute(sql)
+    sql = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
+    name = sys.argv[4]
+    my_cursor.execute(sql, (name,))
 
     all_states = my_cursor.fetchall()
     for each in all_states:
