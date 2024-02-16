@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     my_cursor = mydb.cursor()
 
-    sql = "SELECT * FROM states WHERE name LIKE 'N%'"
+    sql = "SELECT * FROM states WHERE name LIKE BINARY 'N%'"
 
     my_cursor.execute(sql)
 
