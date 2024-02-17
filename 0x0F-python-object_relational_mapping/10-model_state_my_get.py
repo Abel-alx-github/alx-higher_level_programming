@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     stat = session.query(State).filter(State.name == (sys.argv[4],))
 
-    if stat:
+    try:
         print(stat[0].id)
-    else:
+    except IndexError:
         print("Not found")
