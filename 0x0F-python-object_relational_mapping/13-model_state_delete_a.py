@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""update state where its id=2 """
+"""delete state where its name has 'a' """
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -20,5 +20,5 @@ if __name__ == '__main__':
     for stat in toDelete:
         if 'a' in stat.name:
             session.delete(stat)
-    
+
     session.commit()
