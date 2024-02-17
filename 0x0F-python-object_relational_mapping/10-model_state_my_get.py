@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     session = Session()
 
-    stat = session.query(State).filter(State.name == (sys.argv[4],)).first()
+    stat = session.query(State).filter(State.name == (sys.argv[4],))
 
     try:
         print(stat[0].id)
