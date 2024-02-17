@@ -16,9 +16,8 @@ if __name__ == '__main__':
 
     session = Session()
 
-    toDelete = session.query(State).all()
+    toDelete = session.query(State).filter(State.name.like('%a%')).all()
     for stat in toDelete:
-        if 'a' in stat.name:
-            session.delete(stat)
+        session.delete(stat)
 
     session.commit()
