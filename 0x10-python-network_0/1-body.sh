@@ -3,5 +3,5 @@
 
 code=$(curl -sI "$1" | awk '/HTTP/ {print $2}')
 if [[ "$code" == "200" ]]; then
-  curl -s "$1" 
+  curl -sL "$1" 
 fi
