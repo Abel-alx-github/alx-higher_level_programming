@@ -1,4 +1,3 @@
 #!/bin/bash
 #request delete method
-
-curl -sX DELETE "$1"
+curl -X DELETE "$1"
