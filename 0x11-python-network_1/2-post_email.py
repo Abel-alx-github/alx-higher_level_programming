@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-
-
+"""post email with urlli """
+import urllib.parse
+import urllib.request
 import sys
-from urllib.request import urlopen, Request
-from urllib.parse import urlencode
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+
+    data = urllib.parse.urlencode({"email": sys.argv[2]})
+    data = data.encode()
     url = sys.argv[1]
-    email = sys.argv[2]
-    data = urlencode({'email': email}).encode('utf-8')
-    req = Request(url, data=data)
-    with urlopen(req) as res:
-        content = res.read().decode('utf-8')
-        print(content)
+    with urllib.request.urlopen(url, data) as response:
+        cont = response.read().decode("utf-8")
+        print(cont)
