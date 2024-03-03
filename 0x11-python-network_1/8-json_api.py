@@ -5,17 +5,16 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    try:
-        data = {"q": sys.argv[1]}
-    except Exception as e:
-        data = {"q": ""}
+    letter = sys.argv[1] if len(sys.argv) > 1 else ""
+    data = {'q': letter}
+
     url = "http://0.0.0.0:5000/search_user"
     respond = requests.post(url, data=data)
 
     try:
         j_data = respond.json()
         if j_data:
-            print("[{}] {}".format(j_data['id'], j_data['name']))
+            print("[{}] {}".format(j_data.get('id'), j_data.get('name')))
         else:
             print("No result")
     except Exception as e:
