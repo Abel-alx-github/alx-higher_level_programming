@@ -13,14 +13,14 @@ const dic = {};
 
 req.get(url, (err, resp, body) => {
   if (!err && resp.statusCode === 200) {
-    for (let id = 1; id <= 10; id++) {
-      let count = 0;
-      for (const data of JSON.parse(body)) {
-        if (data.userId === id && data.completed) {
-          count += 1;
+    for (const data of JSON.parse(body)) {
+      if (data.completed) {
+        if (data.userId in dic) {
+          dic[data.userId] += 1;
+        } else {
+          dic[data.userId] = 1;
         }
       }
-      dic[id] = count;
     }
     console.log(dic);
   }
