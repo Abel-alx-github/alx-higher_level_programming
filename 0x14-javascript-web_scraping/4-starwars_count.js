@@ -14,8 +14,11 @@ let count = 0;
 req(url, (error, respond, body) => {
   if (!error) {
     for (const data of JSON.parse(body).results) {
-      if (data.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
-        count += 1;
+      for (const char of data.characters) {
+        if (char.endsWith('18/')) {
+          count += 1;
+          break;
+        }
       }
     }
     console.log(count);
